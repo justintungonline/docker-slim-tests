@@ -3,6 +3,15 @@
 # About Repository
 Testing docker-slim to analyze existing containers and minimize them
 
+# From scratch setup
+
+```sh
+cd ~
+mkdir bin
+wget -c https://downloads.dockerslim.com/releases/1.35.1/dist_linux.tar.gz -O - | tar -xz -C ~/bin
+export PATH="$HOME/bin/dist_linux:$PATH"
+```
+
 # Tests
 ```sh
 
@@ -24,17 +33,13 @@ curl http://<YOUR_DOCKER_HOST_IP>:<PORT>
 # Minified Ubuntu Curl image
 
 ```sh
->> docker pull ubuntu:latest
+>> docker pull tutum/curl
 ...
 
->> docker-slim build --target ubuntu:latest --tag ubuntu:curl --http-probe=false --exec "curl checkip.amazonaws.com"
+>> docker-slim build --target tutum/curl --tag tutum/curl-slim --http-probe=false --exec "curl checkip.amazonaws.com"
 ...
 
->> docker run ubuntu:curl curl checkip.amazonaws.com
+>> docker run tutum/curl-slim curl checkip.amazonaws.com
 ...
 
 >> docker images
-ubuntu                 curl                ...        ...         17.4MB
-ubuntu                 latest              ...        ...         467MB
-...
-```
