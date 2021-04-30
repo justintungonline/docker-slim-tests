@@ -30,6 +30,25 @@ curl http://<YOUR_DOCKER_HOST_IP>:<PORT>
 
 ```
 
+# Tests on a Dockerized Azure function
+
+```sh
+
+git clone https://github.com/justintungonline/azure-sa-function-tests.git
+cd azure-sa-function-tests
+docker build . -t azure-sa-function-tests-dockerized2
+
+# call docker-slim and build image, execute a command on container start up, probe with get as localhost:port/api.HttpExample, wait for a timeout before stopping the container
+docker-slim build azure-sa-function-tests-dockerized2 -t azure-sa-function-tests-dockerized2-slim --http-probe-cmd /api/HttpExample --exec "func start --csharp" --continue-after timeout
+
+# In separate terminal
+docker ps
+# get Docker container id
+docker exec -it 742ca277d718 func start --csharp
+# ^C after http probes are complete
+
+```
+
 # Minified Ubuntu Curl image
 
 ```sh
