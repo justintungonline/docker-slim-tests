@@ -17,8 +17,8 @@ export PATH="$HOME/bin/dist_linux:$PATH"
 
 # Pull an image for docker-slim to analyze
 docker build https://raw.githubusercontent.com/justintungonline/docker-azure-cli-function-core-tools-dotnet/main/Dockerfile -t docker-azure-cli-function-core-tools-dotnet
+docker-slim build docker-azure-cli-function-core-tools-dotnet -t docker-azure-cli-function-core-tools-dotnet-slim
 docker images
-docker-slim build docker-azure-cli-function-core-tools-dotnet
 
 # In separate terminal
 # find container web interface to hit it with curl for docker-slim to analyze
