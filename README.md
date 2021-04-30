@@ -43,3 +43,4 @@ curl http://<YOUR_DOCKER_HOST_IP>:<PORT>
 ...
 
 >> docker images
+>> docker run -it tutum/curl-slim
