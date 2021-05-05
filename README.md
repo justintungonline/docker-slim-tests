@@ -1,10 +1,11 @@
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justintungonline/docker-slim-tests) | 
-[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fjustintungonline%2Fdocker-slim-tests)
-
 # About Repository
+
 Testing docker-slim to analyze existing containers and minimize them
 
-# From scratch setup
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justintungonline/docker-slim-tests) |
+[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fjustintungonline%2Fdocker-slim-tests)
+
+## From scratch setup
 
 ```sh
 cd ~
@@ -13,7 +14,8 @@ wget -c https://downloads.dockerslim.com/releases/1.35.1/dist_linux.tar.gz -O - 
 export PATH="$HOME/bin/dist_linux:$PATH"
 ```
 
-# Tests
+## Tests
+
 ```sh
 
 # Pull an image for docker-slim to analyze
@@ -31,7 +33,7 @@ curl http://<YOUR_DOCKER_HOST_IP>:<PORT>
 
 ```
 
-# Tests on a Dockerized Azure function
+## Tests on a Dockerized Azure function
 
 ```sh
 
@@ -50,7 +52,7 @@ docker exec -it 742ca277d718 func start --csharp
 
 ```
 
-# Minified Ubuntu Curl image
+## Minified Ubuntu Curl image
 
 ```sh
 >> docker pull tutum/curl
