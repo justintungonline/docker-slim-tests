@@ -2,7 +2,7 @@
 
 Testing docker-slim to analyze existing containers and minimize them
 
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justintungonline/docker-slim-tests) |
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justunsix/docker-slim-tests) |
 [![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fjustintungonline%2Fdocker-slim-tests)
 
 ## From scratch setup
@@ -37,7 +37,7 @@ curl http://<YOUR_DOCKER_HOST_IP>:<PORT>
 
 ```sh
 
-git clone https://github.com/justintungonline/azure-sa-function-tests.git
+git clone https://github.com/justunsix/azure-sa-function-tests.git
 cd azure-sa-function-tests
 docker build . -t azure-sa-function-tests-dockerized2
 
